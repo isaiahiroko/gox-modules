@@ -53,8 +53,8 @@ func initConfig() {
 	} else {
 		// Search config in home directory with name ".whip" (without extension).
 		viper.AddConfigPath(".")
-		viper.SetConfigName("whip.yaml")
-		viper.SetConfigType("yaml")
+		viper.SetConfigName(".env")
+		viper.("yaml")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match
