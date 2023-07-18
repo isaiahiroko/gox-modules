@@ -1,0 +1,2 @@
+version: 0.0.0
+mongo_url: "mongodb+srv://atlas-user-2:Wcy6Tx9pDZ7U0Vrh@cluster0.jyfgy.mongodb.net/?retryWrites=true&w=majority"
