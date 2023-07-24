@@ -1,4 +1,4 @@
-package store
+package kv
 
 var (
 	buffer = 1000

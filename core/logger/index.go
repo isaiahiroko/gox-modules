@@ -3,8 +3,8 @@ package logger
 import (
 	"io"
 
-	"github.com/origine-run/whip/pkg/store"
-	"github.com/origine-run/whip/pkg/utils"
+	"github.com/origine-run/core/store"
+	"github.com/origine-run/core/utils"
 )
 
 type logger struct {

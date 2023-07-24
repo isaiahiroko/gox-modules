@@ -1,4 +1,4 @@
-package http
+package request
 
 import (
 	"bytes"
@@ -9,6 +9,8 @@ import (
 	netHttp "net/http"
 	netUrl "net/url"
 	"strings"
+
+	"github.com/origine-run/core/utils"
 )
 
 var (
@@ -20,13 +22,11 @@ func init() {
 	header.Add("content-type", "application/json")
 }
 
-type JSON = map[string]any
-
 func Request(
 	method string,
 	url string,
 	payload map[string]any,
-) (JSON, error) {
+) (utils.JSON, error) {
 	var reqBody io.Reader
 
 	if strings.ToUpper(method) == netHttp.MethodGet {
@@ -75,7 +75,7 @@ func Request(
 		return nil, errors.New("invalid JSON response")
 	}
 
-	var resJson JSON
+	var resJson utils.JSON
 	json.Unmarshal(resBody, &resJson)
 
 	return resJson, nil

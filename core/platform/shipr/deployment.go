@@ -1,0 +1,5 @@
+package shipr
+
+func PatchDeployment() {
+
+}

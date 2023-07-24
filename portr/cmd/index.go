@@ -83,7 +83,7 @@ func initConfig() {
 		// Search config in home directory with name ".portr" (without extension).
 		viper.AddConfigPath(home)
 		viper.SetConfigType("yaml")
-		viper.SetConfigName(".portr")
+		viper.SetConfigName(".env")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match
